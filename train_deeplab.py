@@ -68,7 +68,7 @@ class DeepLabV3_plus:
         if not os.path.isdir(args.save_dir): os.mkdir(args.save_dir)
         
         mc = ModelCheckpoint(
-            os.path.join(args.save_dir, 'model.tf'),
+            os.path.join(args.save_dir, 'model.h5'),
             verbose=1,
             save_best_only=True,
             save_weight_only=True)
