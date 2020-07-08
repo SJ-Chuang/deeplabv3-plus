@@ -13,10 +13,10 @@ cd aisteel
 
 ```bash
 python3 train_deeplab.py \
-	--image_path [path/to/image/directory] \
-	--mask_path [path/to/mask/directory] \
-	--save_dir [path/to/save/resurt] \
-	--input_height 720 \
+    --image_path [path/to/image/directory] \
+    --mask_path [path/to/mask/directory] \
+    --save_dir [path/to/save/resurt] \
+    --input_height 720 \
     --input_width 1280 \
     --input_channel 3 \
     --classes 21 \
