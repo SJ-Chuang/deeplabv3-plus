@@ -9,7 +9,7 @@ git clone https://github.com/SJ-Chuang/aisteel.git
 cd aisteel
 ```
 
-## Train
+### Train
 
 ```bash
 python3 deeplab.py \
@@ -27,7 +27,7 @@ python3 deeplab.py \
     --epochs 1000 \
 ```
 
-## Test
+### Test
 
 ```bash
 python3 deeplab.py \
