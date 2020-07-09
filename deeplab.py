@@ -62,6 +62,8 @@ class DeepLabV3_plus:
             metrics=[MeanIoU(num_classes=args.classes)]
         )
         self.image_read()
+        if not os.path.isdir(self.args.save_dir): os.mkdir(self.args.save_dir)
+        
         if self.args.image_path and self.args.mask_path:
             self.train()
             
@@ -72,8 +74,6 @@ class DeepLabV3_plus:
         self.image_preprocessing()
         X_train = np.array([image for image in self.images.values()])
         y_train = np.array([mask for mask in self.masks.values()])
-        
-        if not os.path.isdir(self.args.save_dir): os.mkdir(self.args.save_dir)
         
         mc = ModelCheckpoint(
             os.path.join(self.args.save_dir, 'model.h5'),
@@ -103,7 +103,7 @@ class DeepLabV3_plus:
         for c in range(classes):
             color = list(np.random.choice(range(256), size=3))
             colors.append([int(color[0]), int(color[1]), int(color[2])])
-            
+        
         for name, image in zip(self.tests.keys(), self.tests.values()):
             seg = self.model.predict(np.array([image]))
             classes = seg.shape[-1]
