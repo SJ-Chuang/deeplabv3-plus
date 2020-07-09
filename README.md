@@ -5,7 +5,7 @@ Semantic segmentation for reinforcement inspection
 ## Getting Started
 
 ```
-git https://github.com/SJ-Chuang/aisteel.git
+git clone https://github.com/SJ-Chuang/aisteel.git
 cd aisteel
 ```
 
