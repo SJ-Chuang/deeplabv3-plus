@@ -1,4 +1,4 @@
-# AI Steel
+# DeepLab V3+ for semantic segmentation
 
 Semantic segmentation for reinforcement inspection
 
